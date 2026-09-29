@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -67,8 +68,8 @@ public class Main {
             System.out.println("Укажите название для поиска: find <название>");
             return;
         }
-        Task[] found = manager.findTaskByTitle(argument);
-        if (found.length == 0) {
+        List<Task> found = manager.findTaskByTitle(argument);
+        if (found.isEmpty()) {
             System.out.println("Ничего не найдено по запросу: " + argument);
             return;
         }
