@@ -1,6 +1,7 @@
+package taskmanager;
+
 /**
- * Выбрасывается, когда задача с указанным id не найдена
- * (при удалении, обновлении, поиске по id).
+ * Выбрасывается, когда задача с указанным id не найдена.
  */
 public class TaskNotFoundException extends Exception {
     public TaskNotFoundException(int id) {

@@ -1,0 +1,17 @@
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\AbstractDatabase.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\CsvTaskParser.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\Database.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\FileParsingException.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\ImportSummary.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\JsonTaskParser.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\Main.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\Row.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\Table.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\Task.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\TaskDatabase.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\TaskFileLoader.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\TaskFileParser.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\TaskManager.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\TaskNotFoundException.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\UncheckedFileParsingException.java
+C:\Users\darya\IdeaProjects\Lesson2\src\main\java\taskmanager\ValidationException.java

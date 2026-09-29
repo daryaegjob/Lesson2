@@ -1,6 +1,14 @@
+package taskmanager;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
- * Задача. id неизменяемый (задаётся один раз при создании),
- * остальные поля можно менять через сеттеры — инкапсуляция.
+ * Задача. id неизменяемый, остальные поля можно менять через сеттеры.
+ *
+ * Конструктор помечен @JsonCreator/@JsonProperty, чтобы Jackson мог
+ * создавать Task напрямую из JSON без отдельного DTO-класса — у id
+ * нет сеттера, поэтому обычная автоматическая привязка полей не сработала бы.
  */
 public class Task {
 
@@ -9,7 +17,12 @@ public class Task {
     private String description;
     private String status;
 
-    public Task(int id, String title, String description, String status) {
+    @JsonCreator
+    public Task(
+            @JsonProperty("id") int id,
+            @JsonProperty("title") String title,
+            @JsonProperty("description") String description,
+            @JsonProperty("status") String status) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -42,17 +55,6 @@ public class Task {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    /** Превращает задачу в строку таблицы, в порядке колонок TaskDatabase.COLUMNS. */
-    public Row toRow() {
-        return new Row(new String[]{String.valueOf(id), title, description, status});
-    }
-
-    /** Собирает задачу обратно из строки таблицы. */
-    public static Task fromRow(Row row) {
-        String[] c = row.columns();
-        return new Task(Integer.parseInt(c[0]), c[1], c[2], c[3]);
     }
 
     @Override

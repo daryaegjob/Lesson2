@@ -1,0 +1,5 @@
+[
+  { "id": 1, "title": "Настроить окружение", "description": "Установить IntelliJ и JDK 17", "status": "DONE" },
+  { "id": 2, "title": "Прочитать про Jackson", "description": "Разобраться с ObjectMapper", "status": "IN_PROGRESS" },
+  { "id": 3, "title": "Сделать домашку", "description": "Занятие 4: сериализация и файлы", "status": "TODO" }
+]
