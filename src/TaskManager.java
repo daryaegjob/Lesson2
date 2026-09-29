@@ -1,9 +1,9 @@
+package taskmanager;
+
 import java.util.List;
 
 /**
- * Управляет задачами. Работает с Database<Task> — дженерик уже зафиксирован
- * конкретным типом записи (Task), поэтому наружу отдаются типизированные
- * List<Task>, а не сырые Row или массивы.
+ * Управляет задачами. Работает с Database<Task>.
  */
 public class TaskManager {
 
@@ -14,10 +14,24 @@ public class TaskManager {
         this.database = database;
     }
 
+    /** Создаёт новую задачу с автогенерируемым id — для команд из консоли. */
     public Task addTask(String title, String description, String status) throws ValidationException {
         Task task = new Task(nextId, title, description, status);
         database.insert(task);
         nextId++;
+        return task;
+    }
+
+    /**
+     * Кладёт в БД уже готовую задачу с собственным id — используется при импорте
+     * из файла, где id уже назначены. Подтягивает nextId, чтобы не было коллизий
+     * с задачами, которые потом добавят вручную через addTask.
+     */
+    public Task importTask(Task task) throws ValidationException {
+        database.insert(task);
+        if (task.getId() >= nextId) {
+            nextId = task.getId() + 1;
+        }
         return task;
     }
 
@@ -28,7 +42,6 @@ public class TaskManager {
         }
     }
 
-    /** Ищет задачи по вхождению текста в название (регистронезависимо). */
     public List<Task> findTaskByTitle(String title) {
         return database.findWhere("title", title);
     }
@@ -41,10 +54,6 @@ public class TaskManager {
         return task;
     }
 
-    /**
-     * Обновление задачи по id. Любой параметр можно передать как null —
-     * тогда соответствующее поле не меняется.
-     */
     public void updateTask(int id, String newTitle, String newDescription, String newStatus)
             throws TaskNotFoundException, ValidationException {
         Task existing = findTaskById(id);
@@ -60,7 +69,6 @@ public class TaskManager {
         database.insert(updated);
     }
 
-    /** Печатает список всех задач в консоль. */
     public void getListTasks() {
         List<Task> tasks = database.findAll();
         if (tasks.isEmpty()) {

@@ -1,9 +1,14 @@
+package taskmanager;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
- * Задача. id неизменяемый (задаётся один раз при создании),
- * остальные поля можно менять через сеттеры — инкапсуляция.
+ * Задача. id неизменяемый, остальные поля можно менять через сеттеры.
  *
- * Класс больше ничего не знает про Row/Table — перевод в строку таблицы
- * и обратно теперь целиком в TaskDatabase. Task — чистая доменная модель.
+ * Конструктор помечен @JsonCreator/@JsonProperty, чтобы Jackson мог
+ * создавать Task напрямую из JSON без отдельного DTO-класса — у id
+ * нет сеттера, поэтому обычная автоматическая привязка полей не сработала бы.
  */
 public class Task {
 
@@ -12,7 +17,12 @@ public class Task {
     private String description;
     private String status;
 
-    public Task(int id, String title, String description, String status) {
+    @JsonCreator
+    public Task(
+            @JsonProperty("id") int id,
+            @JsonProperty("title") String title,
+            @JsonProperty("description") String description,
+            @JsonProperty("status") String status) {
         this.id = id;
         this.title = title;
         this.description = description;
