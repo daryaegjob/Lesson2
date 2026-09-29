@@ -35,6 +35,29 @@ public class TaskManager {
         return task;
     }
 
+    /**
+     * Групповое сохранение в БД: пытается импортировать каждую задачу,
+     * невалидные — пропускает (с сообщением в консоль), не прерывая остальные.
+     * Побочный эффект (вставка в БД) внутри filter — не самый "чистый" функциональный
+     * стиль, но для операции массового импорта это обычный прагматичный компромисс.
+     */
+    public ImportSummary importAll(List<Task> tasks) {
+        long importedCount = tasks.stream()
+                .filter(this::tryImport)
+                .count();
+        return new ImportSummary((int) importedCount, tasks.size());
+    }
+
+    private boolean tryImport(Task task) {
+        try {
+            importTask(task);
+            return true;
+        } catch (ValidationException e) {
+            System.out.println("Пропущена задача #" + task.getId() + ": " + e.getMessage());
+            return false;
+        }
+    }
+
     public void removeTask(int id) throws TaskNotFoundException {
         boolean removed = database.deleteById(id);
         if (!removed) {

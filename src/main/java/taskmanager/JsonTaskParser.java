@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Парсит JSON-файл вида [{"id":1,"title":"...", ...}, ...] в список Task.
@@ -20,7 +21,7 @@ public class JsonTaskParser implements TaskFileParser {
     public List<Task> parse(String filePath) throws FileParsingException {
         try {
             Task[] tasks = objectMapper.readValue(new File(filePath), Task[].class);
-            return Arrays.asList(tasks);
+            return Arrays.stream(tasks).collect(Collectors.toList());
         } catch (IOException e) {
             throw new FileParsingException("Не удалось разобрать JSON-файл " + filePath + ": " + e.getMessage());
         }

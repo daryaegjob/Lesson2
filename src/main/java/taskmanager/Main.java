@@ -88,16 +88,8 @@ public class Main {
             return;
         }
 
-        int imported = 0;
-        for (Task task : tasks) {
-            try {
-                manager.importTask(task);
-                imported++;
-            } catch (ValidationException e) {
-                System.out.println("Пропущена задача #" + task.getId() + ": " + e.getMessage());
-            }
-        }
-        System.out.println("Импортировано задач: " + imported + " из " + tasks.size());
+        ImportSummary summary = manager.importAll(tasks);
+        System.out.println("Импортировано задач: " + summary.importedCount() + " из " + summary.totalCount());
     }
 
     private static void handleAdd(TaskManager manager, String argument) throws ValidationException {

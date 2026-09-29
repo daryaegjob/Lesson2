@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22eafb10-a507-4d35-90d0-c8d9cd44af52" name="Changes" comment="Lesson4" />
+    <list default="true" id="22eafb10-a507-4d35-90d0-c8d9cd44af52" name="Changes" comment="Lesson4">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanager/CsvTaskParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanager/CsvTaskParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanager/JsonTaskParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanager/JsonTaskParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanager/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanager/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanager/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanager/TaskManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,33 +24,33 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson-3-generics-collections" />
+        <entry key="$PROJECT_DIR$" value="lesson-4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "daryaegjob"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;daryaegjob&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/daryaegjob/Lesson2.git",
-    "accountId": "d0ba22be-2113-4cec-8b5a-2923631c0c33"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/daryaegjob/Lesson2.git&quot;,
+    &quot;accountId&quot;: &quot;d0ba22be-2113-4cec-8b5a-2923631c0c33&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "daryaegjob",
-    "repository": "Lesson2"
+    &quot;owner&quot;: &quot;daryaegjob&quot;,
+    &quot;repository&quot;: &quot;Lesson2&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3,
   &quot;fromUser&quot;: false
@@ -57,7 +68,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "lesson-4",
+    "git-widget-placeholder": "lesson-5",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
