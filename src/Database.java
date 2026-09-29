@@ -1,21 +1,26 @@
+import java.util.List;
+
 /**
- * Контракт "базы данных" на одну таблицу.
- * Интерфейс ничего не знает про задачи конкретно — только про строки/колонки.
- * Это позволяет TaskManager-у работать с абстракцией, не зная, что происходит внутри.
+ * Контракт "базы данных" для одной таблицы, дженерик по типу записи T.
+ * TaskManager будет работать с Database<Task> и не увидит внутри
+ * ни массивов, ни сырых Row — только типизированные объекты T.
  */
-public interface Database {
+public interface Database<T> {
 
     /** Добавляет запись, предварительно проверив её структуру/корректность. */
-    void insert(Row row) throws ValidationException;
+    void insert(T item) throws ValidationException;
 
-    /** Удаляет первую найденную запись, где columnName == value. Возвращает true, если что-то удалено. */
-    boolean deleteWhere(String columnName, String value);
-
-    /** Возвращает все записи, где columnName == value (точное совпадение). */
-    Row[] select(String columnName, String value);
+    /** Удаляет запись с данным id. Возвращает true, если что-то удалено. */
+    boolean deleteById(int id);
 
     /** Возвращает все записи таблицы. */
-    Row[] selectAll();
+    List<T> findAll();
+
+    /** Возвращает запись по id, или null, если не найдена. */
+    T findById(int id);
+
+    /** Возвращает записи, где значение колонки columnName содержит valuePart (без учёта регистра). */
+    List<T> findWhere(String columnName, String valuePart);
 
     /** Возвращает имена колонок таблицы. */
     String[] getColumnNames();

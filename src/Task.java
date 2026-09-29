@@ -1,6 +1,9 @@
 /**
  * Задача. id неизменяемый (задаётся один раз при создании),
  * остальные поля можно менять через сеттеры — инкапсуляция.
+ *
+ * Класс больше ничего не знает про Row/Table — перевод в строку таблицы
+ * и обратно теперь целиком в TaskDatabase. Task — чистая доменная модель.
  */
 public class Task {
 
@@ -42,17 +45,6 @@ public class Task {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    /** Превращает задачу в строку таблицы, в порядке колонок TaskDatabase.COLUMNS. */
-    public Row toRow() {
-        return new Row(new String[]{String.valueOf(id), title, description, status});
-    }
-
-    /** Собирает задачу обратно из строки таблицы. */
-    public static Task fromRow(Row row) {
-        String[] c = row.columns();
-        return new Task(Integer.parseInt(c[0]), c[1], c[2], c[3]);
     }
 
     @Override
