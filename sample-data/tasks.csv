@@ -1,0 +1,4 @@
+id,title,description,status
+1,Настроить окружение,Установить IntelliJ и JDK 17,DONE
+2,Прочитать про Jackson,Разобраться с ObjectMapper,IN_PROGRESS
+3,Сделать домашку,Занятие 4: сериализация и файлы,TODO
