@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22eafb10-a507-4d35-90d0-c8d9cd44af52" name="Changes" comment="Lesson4">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanager/CsvTaskParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanager/CsvTaskParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanager/JsonTaskParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanager/JsonTaskParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanager/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanager/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taskmanager/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taskmanager/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +54,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Maven.task-manager [compile].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -75,7 +67,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/darya/IdeaProjects/Lesson2/src/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/darya/IdeaProjects/Lesson2/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SharedIndexes">
